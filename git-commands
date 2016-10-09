@@ -1,0 +1,44 @@
+git init => cria um repositorio
+git status => mostra o status de um repositorio
+git log => mostra todos os commits de um repositorio
+git checkout <ID do commit> => "aponta" o codigo do sistema para um commit especifico
+git clone => copia um repositorio inteiro para a maquina local
+git add => adiciona arquivos em um mesmo commit
+git reset --hard => elimina TODAS as alteracoes nao comitadas (staging area)
+git diff <commit antigo> <commit novo> => compara dois commits
+git diff => compara o que foi alterado entre o "Working Directory" e a "Staging Area" antes de fazer o commit
+git diff --staged => compara o que foi alterado entre a "Staging Area" e o "Repository" antes de fazer o commit
+git commit => faz o commit
+git commit -m "<message>" => faz o commit ja adicionando a mensagem
+git checkout master => faz o checkout para a branch master
+git branch => lista as branches
+git branch <nome> => cria uma nova branch
+git checkout <nome da branch> => aponta o versionamento para a branch especificada
+git log --graph --oneline <branch a> <branch b> => mostra os commits feitos nas branches "a" e "b" em forma "grafica" e um por linha
+git checkout -b <nome da branch nova> => cria uma branch para um checkout feito sem branch
+git merge <banch a> <branch b> => faz o merge dos commits da branch "a" dentro da branch "b"
+git branch -d <nome da branch> => deleta a branch (mas mantem os commits dela)
+git show <ID do commit> => mostra as alterações efetuadas pelo commit sem comparar com o commit anterior (ou qualquer outro)
+git remote => mostra os repositorios remotos
+git remote add <nome do repositorio> <URL remoto do repositorio> => cria um repositorio remoto
+git push <nome do repositorio remoto> <nome da branch local> => transfere os dados da branch para o repositorio remoto
+git pull <nome do repositorio remoto> <nome da branch local> => transfere os dados do repositorio remoto para a branch local
+git fetch <nome do repositorio remoto> => transfere os dados do repositorio remoto para a branch local e faz o merge das eventuais alteracoes (eh o mesmo que rodar os comandos 'git pull' + 'git merge')
+
+
+git config --global core.editor "'C:/Windows/System32/notepad.exe' -n -w"
+
+git config --global user.name "Your Name"
+git config --global user.email you@example.com
+
+-- restore 1 deleted file (no commited)
+git checkout <file>
+$ git checkout src/main/java/com/pyogi/search/dao/search_result.hbm.xml
+
+
+SALVAR ARQUIVOS E SAIR
+
+:w => salvar da memória (buffer) para o disco (arquivo)
+:q => sair do editor
+:wq => salvar e sair do editor
+:x => salvar e sair do editor
