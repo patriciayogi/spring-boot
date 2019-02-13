@@ -4,6 +4,7 @@ import com.google.common.util.concurrent.RateLimiter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -16,7 +17,8 @@ import java.util.function.Function;
 /**
  * @author pyogi
  **/
-@WebFilter(urlPatterns = "/ums/account/createUser")
+@Component
+@WebFilter(urlPatterns = "/hello")
 public class RateLimiterFilter implements Filter {
 
     @Value("${limit.rate.second:1}")
