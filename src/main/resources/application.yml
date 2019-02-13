@@ -1,0 +1,10 @@
+server.port: 7070
+
+spring:
+  profiles: dev
+name: sprng-template
+environment: dev
+
+limit:
+  rate:
+    second: 1
